@@ -1,57 +1,63 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
-#ruby-gemset=railstutorial_rails_4_0
+ruby '2.1.0'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
-gem 'pg'                                  # Use postgresql as the database for Active Record
-gem 'hstore-attributes'                   # Allows definition of hstore attirbutes in model
-#gem 'activeadmin'                         # The administration framework for Ruby on Rails
-#gem 'meta_search'                         # Used for activeadmin. Allows simple search forms to be created
-gem 'paperclip'                           # Easy upload management for ActiveRecord
-gem 'rack-ssl-enforcer'                   # Add easy ability to force SSL
-gem 'highcharts-rails'                    # Include highcharts javascript in asset pipeline
-#gem 'sass-rails'                          # Use SCSS for stylesheets
-gem 'uglifier'                            # Use Uglifier as compressor for JavaScript assets
-gem 'coffee-rails'                        # Use CoffeeScript for .js.coffee assets and views
-gem 'jquery-rails'                        # Use jquery as the JavaScript library
-gem 'turbolinks'                          # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'jbuilder'                            # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem "devise", "~> 3.2.3"				  # Use devise for user model and authentication
-gem "bcrypt-ruby", "~> 3.1.5"			  # secure hash algorithm for wrapping passwords - devise runtime requires this version
+gem "unicorn", "~> 4.7.0"                             # Webserver recommended by heroku (for increased scaling)
+gem "unicorn-rails", "~> 1.1.0"                       # Makes unicorn the default rails server
+gem "pg", "~> 0.17.1"                                 # Postgres gem
+gem "heroku", "~> 3.2.2"                              # Heroku hosting
+#gem "devise", "~> 3.2.2"                              # User authentication for users
+#gem 'activeadmin', github: 'gregbell/active_admin'    # The administration framework for Ruby on Rails
+#gem "active_admin_importable", "~> 1.1.2"             # Ability to upload CSV files in ActiveAdmin
+#gem "ransack", github: "activerecord-hackery/ransack" # gem "meta_search", '>= 1.1.3' Used for activeadmin. Allows simple search forms to be created
+gem "jquery-rails", "~> 3.0.4"                        # Used for activeadmin (and other things)
+gem "jquery-ui-rails"                                 # Used for activeadmin (and other things)
+#gem 'newrelic_rpm'                                    # Gem to support new relic application monitoring
+#gem "omniauth", "~> 1.1.4"                            # Needed for Facebook login and signups
+#gem "omniauth-facebook", "~> 1.5.1"                   # Facebook specific omniauth support
+#gem "fog"                                             # Standard gem for AWS access
+#gem "browser", "~> 0.3.2"                             # Easy browser make/version detection
+#gem "premailer-rails", "~> 1.6.1"                     # In-lines stylesheets and rewrite relative URLs in emails
+gem "hstore-attributes", "~> 0.0.4"                   # Cuts down on code it takes to get hstore working in models
+gem "uglifier", "~> 2.4.0"                            # Ruby wrapper for UglifyJS JavaScript compressor.
+gem 'sass-rails',   '~> 4.0.1'                        # Needed for activeadmin
+gem 'coffee-rails', '~> 4.0.1'
+gem "possessive"                                      # For making a noun possesive
+#gem 'draper', '~> 1.3'                                # Decorator manager
+#gem "gravatar_image_tag", "~> 1.2.0"                  # Easy way of getting gravatar images and detecting if they are present
+#gem "memcachier", "~> 0.0.2"                          # See https://devcenter.heroku.com/articles/memcachier#rails-3-and-4
+#gem "dalli", "~> 2.7.0"                               # Required for memcachier
 
-
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', '0.3.20', require: false
+group :staging, :production do
+  gem "rails_12factor", "~> 0.0.2"                    # Helps speed up deploys on heroku
 end
 
-group :development, :test do
-  gem 'sqlite3', '1.3.8'
-  gem 'rspec-rails', '2.13.1'
+group :development do
+  #gem "rack-mini-profiler"                            # Show backend performance info
+end
+
+group :development, :test, :staging do
+  gem "awesome_print"                                 # Nicely formatted data structures in console, for example "ap User.first"
+  gem "factory_girl_rails", "~> 4.3.0"                # Test data generator -- see spec/factories/factories.rb
+  gem "faker", "~> 1.2.0"                             # Easy way to add fake data: names, email addresses, etc.
+  gem "git-smart", "~> 0.1.9"                         # Allows "git smart-pull" for less merge messes
 end
 
 group :test do
- gem 'selenium-webdriver', '2.35.1'
- gem 'capybara', '2.1.0'
+  gem "rspec-rails", "~> 2.14.0"
+  gem "capybara", "~> 2.2.1"
+  gem "database_cleaner", "~> 1.2.0"
+  gem "xpath", "~> 2.0.0"
+  gem "selenium-webdriver", "~> 2.39.0"
+  gem "capybara-firebug", '~> 2.0.0'
+  gem "codeclimate-test-reporter", require: false     # Semaphore & code climate integration: https://semaphoreapp.com/projects/2578/integrations/code_climate/new
+  gem "timecop", "~> 0.7.0"                           # Set system time for tests
 end
 
+# add these gems to help with the transition to Rails 4:
+gem 'protected_attributes'
+gem 'rails-observers'
 
-group :production do
- gem 'rails_12factor', '0.0.2'
-end
+gem 'pry-debugger', group: [:development, :test]      # Pry navigation commands via debugger (formerly ruby-debug) https://github.com/nixme/pry-debugger
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
 
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
