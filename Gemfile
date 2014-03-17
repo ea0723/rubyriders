@@ -5,11 +5,11 @@ gem 'rails', '4.0.2'
 gem "unicorn", "~> 4.7.0"                             # Webserver recommended by heroku (for increased scaling)
 gem "unicorn-rails", "~> 1.1.0"                       # Makes unicorn the default rails server
 gem "pg", "~> 0.17.1"                                 # Postgres gem
-gem "heroku", "~> 3.2.2"                              # Heroku hosting
-#gem "devise", "~> 3.2.2"                              # User authentication for users
-#gem 'activeadmin', github: 'gregbell/active_admin'    # The administration framework for Ruby on Rails
+gem "heroku", "~> 3.2.2"                              # Heroku hosting (original gemfile used 3.2.2)
+gem "devise", "~> 3.2.2"                              # User authentication for users (original gemfile used 3.2.2)
+gem 'activeadmin', github: 'gregbell/active_admin'    # The administration framework for Ruby on Rails
 #gem "active_admin_importable", "~> 1.1.2"             # Ability to upload CSV files in ActiveAdmin
-#gem "ransack", github: "activerecord-hackery/ransack" # gem "meta_search", '>= 1.1.3' Used for activeadmin. Allows simple search forms to be created
+gem "ransack", github: "activerecord-hackery/ransack" # gem "meta_search", '>= 1.1.3' Used for activeadmin. Allows simple search forms to be created
 gem "jquery-rails", "~> 3.0.4"                        # Used for activeadmin (and other things)
 gem "jquery-ui-rails"                                 # Used for activeadmin (and other things)
 #gem 'newrelic_rpm'                                    # Gem to support new relic application monitoring
