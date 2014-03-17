@@ -9,4 +9,20 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-RubyAngel::Application.config.secret_key_base = '2369cb94fb81e822b41d79841c2b579d7cf75c71412ff4626a026b9a4ab9efe07ba7a9dde0ee11abd098e3ba270258ace9b2bb84355f688d0d6a19605244623d'
+
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+RubyAngel::Application.config.secret_key_base = secure_token

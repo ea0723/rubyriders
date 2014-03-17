@@ -17,6 +17,8 @@ gem 'coffee-rails'                        # Use CoffeeScript for .js.coffee asse
 gem 'jquery-rails'                        # Use jquery as the JavaScript library
 gem 'turbolinks'                          # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'jbuilder'                            # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem "devise", "~> 3.2.3"				  # Use devise for user model and authentication
+gem "bcrypt-ruby", "~> 3.1.5"			  # secure hash algorithm for wrapping passwords - use with devise
 
 
 
