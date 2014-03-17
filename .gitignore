@@ -26,3 +26,4 @@ server.key
 *.crt
 *.key
 /public/default_questions.json
+.secret
