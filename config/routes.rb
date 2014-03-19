@@ -1,4 +1,6 @@
 RubyAngel::Application.routes.draw do
+  resources :companies
+
   devise_for :users
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
