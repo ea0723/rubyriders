@@ -1,9 +1,10 @@
 ActiveAdmin.register User do
- permit_params :email, :password, :password_confirmation
+ permit_params :first_name, :last_name, :email, :password, :password_confirmation
 
   index do
     selectable_column
-    column "Name", (:first_name+:last_name.join(" "))
+    column :first_name
+    column :last_name
     column :email
     column :active do |value|
       value.active == 0 ? "No" : "Yes"
@@ -11,10 +12,13 @@ ActiveAdmin.register User do
     column "Created", :created_at
     column "Last Signed In", :last_sign_in_at
     actions
+
+
   end
 
   filter :active
 
+=begin
   show do
     attributes_table do
       row :first_name
@@ -23,6 +27,7 @@ ActiveAdmin.register User do
       row :last_sign_in_at
     end
   end
+=end
 
 
   form do |f|
@@ -34,6 +39,24 @@ ActiveAdmin.register User do
       f.input :password_confirmation
     end
     f.actions
+
+
+  end
+
+  controller do
+    def update
+      params[:user][:password] = params[:user][:password_confirmation] = nil if params[:user][:password].blank?
+
+      begin
+        User.find(params[:id]).update!(params[:user])
+      rescue Exception => e
+        error_message = e.message
+      end
+
+      redirect_to admin_user_path(params[:id]), :notice => ("Successfully updated!" unless error_message),
+                  :alert => error_message
+    end
   end
 
 end
+
