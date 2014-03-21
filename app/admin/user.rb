@@ -12,13 +12,10 @@ ActiveAdmin.register User do
     column "Created", :created_at
     column "Last Signed In", :last_sign_in_at
     actions
-
-
   end
 
   filter :active
 
-=begin
   show do
     attributes_table do
       row :first_name
@@ -27,19 +24,19 @@ ActiveAdmin.register User do
       row :last_sign_in_at
     end
   end
-=end
-
 
   form do |f|
+    f.semantic_errors *f.object.errors.keys
     f.inputs "User Details" do
       f.input :first_name
       f.input :last_name
       f.input :email
-      f.input :password
-      f.input :password_confirmation
+      if f.object.new_record?
+        f.input :password
+        f.input :password_confirmation
+      end
     end
-    f.actions
-
+    #f.actions
 
   end
 
