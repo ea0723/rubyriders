@@ -8,7 +8,7 @@ ActiveAdmin.register Company do
     column :state
     column :industry
     column "Created", :created_at
-    column "Last Modified", :updated_at
+    column :updated_at
     actions
   end
 
@@ -17,9 +17,6 @@ ActiveAdmin.register Company do
   filter :industry
   filter :min_employees
   filter :max_employees
-  filter :created_at
-  filter :updated_at
-
 
   show :title => :name do
     attributes_table do
@@ -33,8 +30,6 @@ ActiveAdmin.register Company do
       row :updated_at, :label => "Last Modified"
     end
   end
-
-
 
   form do |f|
     f.inputs "Company Details" do

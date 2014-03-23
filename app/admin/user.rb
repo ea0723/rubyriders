@@ -35,8 +35,9 @@ ActiveAdmin.register User do
         f.input :password
         f.input :password_confirmation
       end
+      f.input :active, :default => true, :hidden => true
     end
-    #f.actions
+    f.actions
 
   end
 

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amt invested:</strong>
+  <%= @investment.amt_invested %>
+</p>
+
+<p>
+  <strong>Inv type:</strong>
+  <%= @investment.inv_type %>
+</p>
+
+<p>
+  <strong>Capitalization:</strong>
+  <%= @investment.capitalization %>
+</p>
+
+<p>
+  <strong>Funding round:</strong>
+  <%= @investment.funding_round %>
+</p>
+
+<p>
+  <strong>Investmt date:</strong>
+  <%= @investment.investmt_date %>
+</p>
+
+<p>
+  <strong>Maturity:</strong>
+  <%= @investment.maturity %>
+</p>
+
+<p>
+  <strong>Conversion trigger:</strong>
+  <%= @investment.conversion_trigger %>
+</p>
+
+<%= link_to 'Edit', edit_investment_path(@investment) %> |
+<%= link_to 'Back', investments_path %>

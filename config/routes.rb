@@ -1,4 +1,6 @@
 RubyAngel::Application.routes.draw do
+  resources :investments
+
   resources :companies
 
   devise_for :users
