@@ -4,5 +4,10 @@ class Company < ActiveRecord::Base
 
   has_many :investment
 
+  #
+  #def company_name
+  #  Company.
+  #end
+
 
 end

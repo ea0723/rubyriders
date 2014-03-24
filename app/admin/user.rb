@@ -14,7 +14,7 @@ ActiveAdmin.register User do
     actions
   end
 
-  filter :active
+ filter :active
 
   show do
     attributes_table do

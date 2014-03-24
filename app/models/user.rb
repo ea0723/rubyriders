@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :first_name, :last_name, :email, :password, :password_confirmation, :name, :id
+  attr_accessible :first_name, :last_name, :email, :password, :password_confirmation
 
 
   # Include default devise modules. Others available are:
@@ -9,9 +9,12 @@ class User < ActiveRecord::Base
 
   has_many :investment
 
-def name
-  ["#{self.first_name}", "#{self.last_name}"].join(" ")
-end
+#def to_s
+#  ["#{self.first_name}", "#{self.last_name}"].join(" ")
+#end
 
+def to_s
+  ["#{first_name}", "#{last_name}"].join(" ")
+end
 
 end

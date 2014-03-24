@@ -4,12 +4,12 @@ ActiveAdmin.register Investment do
 
   menu :label => "Investments", :parent => "Users", :priority => 0
 
-  # fields => :amt_invested, :inv_type, :capitalization, :funding_round, :investmt_date, :maturity, :conversion_trigger,
+  # fields for reference :amt_invested, :inv_type, :capitalization, :funding_round, :investmt_date, :maturity, :conversion_trigger,
 
 
   index do
     selectable_column
-    #column :user
+    column ("Investor"), :user
     #column :company.name #{ |company| link_to company.name, admin_company_path(company.id, ) }
     column :amt_invested do |amount|
       number_to_currency amount.amt_invested
@@ -34,8 +34,8 @@ ActiveAdmin.register Investment do
 
   show do
     attributes_table do
-      #row (:user) #{ |user| link_to user.name, admin_user_path(user.name) }
-      #row (:company) #{ |company| link_to company.name, admin_company_path(company.name,) }
+      row :user, :label => "Investor"
+      #row :company
       row :amt_invested do |amount|
         number_to_currency amount.amt_invested
       end
@@ -56,7 +56,7 @@ ActiveAdmin.register Investment do
 
   form do |f|
     f.inputs "Investment Details" do
-      #f.input :user, :as => :select, :collection => User.all, :include_blank => false
+      f.input "Investor", :as => :select, :collection => User.all, :include_blank => false
       #f.input :company, :as => :select, :collection => Company.all, :include_blank => false
       f.input :amt_invested
       f.input :inv_type
