@@ -2,7 +2,7 @@ ActiveAdmin.register Investment do
 
   #menu :label => "Investments", :parent => "Users", :priority => 0
 
-  # fields for reference :amt_invested, :inv_type, :capitalization, :funding_round, :investmt_date, :maturity, :conversion_trigger
+  # fields for reference :amt_invested, :inv_type, :capitalization, :funding_round, :investmt_date, :maturity, :conversion_trigger, :documents, :documents_cache, :remove_documents
   index do
     selectable_column
     column "Investor" do |investment|
@@ -52,7 +52,9 @@ ActiveAdmin.register Investment do
       row :conversion_trigger do |trigger|
         number_to_currency trigger.conversion_trigger
       end
-      row :documents
+      row :documents #do |d|
+        #d.Investment.document_filename
+      #end
     end
   end
 
@@ -60,7 +62,6 @@ ActiveAdmin.register Investment do
     f.inputs "Investment Details" do
       f.input :user
       f.input :company
-      #f.input :company, :as => :select, :collection => Company.all, :include_blank => false
       f.input :amt_invested
       f.input :inv_type
       f.input :capitalization
@@ -68,11 +69,8 @@ ActiveAdmin.register Investment do
       f.input :investmt_date
       f.input :maturity
       f.input :conversion_trigger
-      f.input "Documents", :multipart => true do
-        f.input :documents, :as => :file, :required => false
-        f.input :documents_cache, :as => :hidden
-        f.input :remove_documents, :as => :check_box
-      end
+      f.input :documents, :as => :file, :required => false, :multipart => true
+      f.input :remove_documents, :as => :boolean, :required => false
     end
     f.actions
   end

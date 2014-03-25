@@ -15,7 +15,7 @@ gem "jquery-ui-rails"                                  # Used for activeadmin (a
 #gem 'newrelic_rpm'                                    # Gem to support new relic application monitoring
 #gem "omniauth", "~> 1.1.4"                            # Needed for Facebook login and signups
 #gem "omniauth-facebook", "~> 1.5.1"                   # Facebook specific omniauth support
-#gem "fog"                                             # Standard gem for AWS access
+gem "fog"                                              # Standard gem for AWS access - e.g. uploading files via CarrierWave
 #gem "browser", "~> 0.3.2"                             # Easy browser make/version detection
 #gem "premailer-rails", "~> 1.6.1"                     # In-lines stylesheets and rewrite relative URLs in emails
 gem "hstore-attributes", "~> 0.0.4"                    # Cuts down on code it takes to get hstore working in models
