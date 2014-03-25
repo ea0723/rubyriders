@@ -68,7 +68,11 @@ ActiveAdmin.register Investment do
       f.input :investmt_date
       f.input :maturity
       f.input :conversion_trigger
-      f.input :documents, :as => :file, :required => false
+      f.input "Documents", :multipart => true do
+        f.input :documents, :as => :file, :required => false
+        f.input :documents_cache, :as => :hidden
+        f.input :remove_documents, :as => :check_box
+      end
     end
     f.actions
   end
