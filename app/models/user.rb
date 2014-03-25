@@ -7,14 +7,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :investment
+  has_many :investments
 
-#def to_s
-#  ["#{self.first_name}", "#{self.last_name}"].join(" ")
-#end
-
-def to_s
-  ["#{first_name}", "#{last_name}"].join(" ")
-end
+  def to_s
+    "#{first_name} #{last_name}"
+  end
 
 end

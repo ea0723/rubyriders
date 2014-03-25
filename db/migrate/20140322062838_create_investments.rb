@@ -12,4 +12,9 @@ class CreateInvestments < ActiveRecord::Migration
       t.timestamps
     end
   end
+
+  def down
+    drop_table :investments
+  end
+
 end

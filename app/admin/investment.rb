@@ -1,16 +1,14 @@
 ActiveAdmin.register Investment do
 
-#permit_params :amt_invested, :inv_type, :capitalization, :funding_round, :investmt_date, :maturity, :conversion_trigger,
+  #menu :label => "Investments", :parent => "Users", :priority => 0
 
-  menu :label => "Investments", :parent => "Users", :priority => 0
-
-  # fields for reference :amt_invested, :inv_type, :capitalization, :funding_round, :investmt_date, :maturity, :conversion_trigger,
-
-
+  # fields for reference :amt_invested, :inv_type, :capitalization, :funding_round, :investmt_date, :maturity, :conversion_trigger
   index do
     selectable_column
-    column ("Investor"), :user
-    #column :company.name #{ |company| link_to company.name, admin_company_path(company.id, ) }
+    column "Investor" do |investment|
+      investment.user.to_s
+    end
+    column :company
     column :amt_invested do |amount|
       number_to_currency amount.amt_invested
     end
@@ -26,6 +24,7 @@ ActiveAdmin.register Investment do
     column :conversion_trigger do |trigger|
       number_to_currency trigger.conversion_trigger
     end
+    column :documents
     actions
   end
 
@@ -34,8 +33,10 @@ ActiveAdmin.register Investment do
 
   show do
     attributes_table do
-      row :user, :label => "Investor"
-      #row :company
+      row "Investor" do |investment|
+        investment.user.to_s
+      end
+      row :company
       row :amt_invested do |amount|
         number_to_currency amount.amt_invested
       end
@@ -51,12 +52,14 @@ ActiveAdmin.register Investment do
       row :conversion_trigger do |trigger|
         number_to_currency trigger.conversion_trigger
       end
+      row :documents
     end
   end
 
   form do |f|
     f.inputs "Investment Details" do
-      f.input "Investor", :as => :select, :collection => User.all, :include_blank => false
+      f.input :user
+      f.input :company
       #f.input :company, :as => :select, :collection => Company.all, :include_blank => false
       f.input :amt_invested
       f.input :inv_type
@@ -65,6 +68,7 @@ ActiveAdmin.register Investment do
       f.input :investmt_date
       f.input :maturity
       f.input :conversion_trigger
+      f.input :documents, :as => :file, :required => false
     end
     f.actions
   end

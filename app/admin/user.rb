@@ -16,7 +16,7 @@ ActiveAdmin.register User do
 
  filter :active
 
-  show do
+  show :title => :to_s do
     attributes_table do
       row :first_name
       row :last_name
