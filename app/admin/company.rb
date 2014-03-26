@@ -7,6 +7,8 @@ ActiveAdmin.register Company do
     column :city
     column :state
     column :industry
+    column :twitter
+    column "LinkedIn", :linkedin
     column "Created", :created_at
     column :updated_at
     actions
@@ -15,8 +17,8 @@ ActiveAdmin.register Company do
   filter :size
   filter :state
   filter :industry
-  filter :min_employees
-  filter :max_employees
+  #filter :min_employees
+  #filter :max_employees
 
   show :title => :name do
     attributes_table do
@@ -26,6 +28,8 @@ ActiveAdmin.register Company do
       row :industry
       row :min_employees
       row :max_employees
+      row :twitter
+      row :linkedin, :label => "LinkedIn"
       row :created_at, :label=> "Created"
       row :updated_at, :label => "Last Modified"
     end
@@ -40,6 +44,8 @@ ActiveAdmin.register Company do
       f.input :size
       f.input :min_employees
       f.input :max_employees
+      f.input :twitter
+      f.input :linkedin, :as => :url
     end
     f.actions
   end
