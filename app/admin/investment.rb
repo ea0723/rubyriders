@@ -9,22 +9,24 @@ ActiveAdmin.register Investment do
       investment.user.to_s
     end
     column :company
-    column :amt_invested do |amount|
-      number_to_currency amount.amt_invested
+    column :amt_invested do |investment|
+      number_to_currency investment.amt_invested
     end
     column :inv_type
-    column :capitalization do |capital|
-      number_to_currency capital.capitalization
+    column :capitalization do |investment|
+      number_to_currency investment.capitalization
     end
-    column :funding_round do |funding|
-      number_to_currency funding.funding_round
+    column :funding_round do |investment|
+      number_to_currency investment.funding_round
     end
     column :investmt_date
     column :maturity
-    column :conversion_trigger do |trigger|
-      number_to_currency trigger.conversion_trigger
+    column :conversion_trigger do |investment|
+      number_to_currency investment.conversion_trigger
     end
-    column :documents
+    column "Documents" do |investment|
+      investment.documents.to_s.split('/').last if investment.documents.present?
+    end
     actions
   end
 
@@ -37,23 +39,24 @@ ActiveAdmin.register Investment do
         investment.user.to_s
       end
       row :company
-      row :amt_invested do |amount|
-        number_to_currency amount.amt_invested
+      row :amt_invested do |investment|
+        number_to_currency investment.amt_invested
       end
       row :inv_type
-      row :capitalization do |capital|
-        number_to_currency capital.capitalization
+      row :capitalization do |investment|
+        number_to_currency investment.capitalization
       end
-      row :funding_round do |funding|
-        number_to_currency funding.funding_round
+      row :funding_round do |investment|
+        number_to_currency investment.funding_round
       end
       row :investmt_date
       row :maturity
-      row :conversion_trigger do |trigger|
-        number_to_currency trigger.conversion_trigger
+      row :conversion_trigger do |investment|
+        number_to_currency investment.conversion_trigger
       end
-      row :documents #do |d|
-        #d.Investment.document_filename
+      row "Documents" do |investment|
+        investment.documents.to_s.split('/').last if investment.documents.present?
+      end
       #end
     end
   end
@@ -66,8 +69,8 @@ ActiveAdmin.register Investment do
       f.input :inv_type
       f.input :capitalization
       f.input :funding_round
-      f.input :investmt_date
-      f.input :maturity
+      f.input :investmt_date, :as => :datepicker
+      f.input :maturity, :as => :datepicker
       f.input :conversion_trigger
       f.input :documents, :as => :file, :required => false, :multipart => true
       f.input :remove_documents, :as => :boolean, :required => false
@@ -75,6 +78,9 @@ ActiveAdmin.register Investment do
     f.actions
   end
   
+  # Todo update datepicker fields to be inline vs. two separate rows
+  #
+  #
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #

@@ -20,4 +20,4 @@ CarrierWave.configure do |config|
 
 end
 
-# set up on heroku AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, S3_BUCKET_NAME
+# TODO set up on heroku AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, S3_BUCKET_NAME

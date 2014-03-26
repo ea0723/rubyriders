@@ -6,9 +6,6 @@ ActiveAdmin.register User do
     column :first_name
     column :last_name
     column :email
-    column :active do |value|
-      value.active == 0 ? "No" : "Yes"
-    end
     column "Created", :created_at
     column "Last Signed In", :last_sign_in_at
     actions
@@ -35,7 +32,6 @@ ActiveAdmin.register User do
         f.input :password
         f.input :password_confirmation
       end
-      f.input :active, :default => true, :hidden => true
     end
     f.actions
 
