@@ -1,39 +1,11 @@
 @import "bootstrap";
 @import "bootstrap/theme";
 
-/* universal */
-
-html {
-  overflow-y: scroll;
-}
-
-body {
-  padding-top: 50px;
-}
-
-section {
-  overflow: auto;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.center {
-  text-align: center;
-}
-
-.center h1 {
-  margin-bottom: 10px;
-}
-
-
 
 /* Table of Content
 ==================================================
 
 #BOOSTRAP CUSTOMIZATION
-#NEKO CSS FRAMEWORK
 #TYPOGRAPHY
 #GENERAL
 #PARALLAX STUFF
@@ -137,9 +109,6 @@ textarea {
 /*** END MEDIA QUERIES ***/
 
 /* END BOOSTRAP CUSTOMIZATION
-================================================== */
-
-/* NEKO CSS FRAMEWORK
 ================================================== */
 
 .iconRounded {
@@ -332,8 +301,8 @@ h1.noSubtitle {
 }
 
 .paralaxText blockquote {
-  font-size: 33px;
-  line-height: 33px;
+  font-size: 3em;
+  line-height: 1.15em;
   margin-bottom: 0;
   font-weight: 300;
   font-family: 'Open Sans', sans-serif;
@@ -827,8 +796,7 @@ body#fullScreen #mainHeader {
 }
 
 #homeFullScreen {
-  background-image: url('../assets/images/ny.jpg');
-  /*background-image: url('../images/theme-pics/paralax-1.jpg');*/
+  background: url('ny.jpg');
   height: 100%;
   display: table;
 }
@@ -857,9 +825,9 @@ body#fullScreen #mainHeader {
 }
 
 #logoBig h1 {
-  font-size: 5em;
-  font-weight: bolder;
-  line-height: 1em;
+  font-size: 7em;
+  font-weight: 300;
+  line-height: 1.5em;
 }
 
 #homeFullScreen #flexHome {
@@ -868,13 +836,13 @@ body#fullScreen #mainHeader {
 
 #homeFullScreen #flexHome h1, #homeFullScreen #flexHome .flex-control-nav {
   text-align: center;
+  color: white;
   //margin-bottom: 44px;
   //font-size: 2.75em;
 }
 
-
 #homeFullScreen .flexslider .slides > li {
-  //height: 80px;
+  height: 80px;
   list-style: none;
 }
 
@@ -914,6 +882,7 @@ body#fullScreen #mainHeader {
 
 .flexslider .slides > li {
   //height: 2.875em;
+  height: 110px;
   list-style: none;
 }
 
@@ -968,26 +937,37 @@ body#fullScreen #mainHeader {
 
 /*** Home & FlexHome MEDIA QUERIES ***/
 
+/*** Devices 500px and smaller ***/
+
 @media (max-width: 500px) {
   #logoBig h1 {
     font-size: 4.25em;
     font-weight: bolder;
     line-height: 1em;
   }
-
   #homeFullScreen #flexHome h1 {
     margin-bottom: 1em;
-    font-weight: 300;
-    font-size: 1.75em;
+    font-weight: 400;
+    font-size: 2em;
   }
-  #homeFullScreen .flexslider .slides > li {
-    height: 120px;
-  }
+  //#homeFullScreen .flexslider .slides > li {
+  //  height: 120px;
+  //}
   //#homeFullScreen .flexslider .slides > li {
   //  height: 60px;
   //}
   #flexHome h2 {
     font-size: 0.75em;
+  }
+  .boxFeature-2 h1 {
+    font-size: 3em;
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 2.5%;
+  }
+  .boxFeature-2 h2 {
+    font-size: 2.15em;
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 2.5%;
   }
 }
 

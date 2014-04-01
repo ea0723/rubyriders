@@ -54,3 +54,4 @@ ActiveAdmin.register User do
 
 end
 
+# TODO add update password option
