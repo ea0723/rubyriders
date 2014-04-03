@@ -843,8 +843,8 @@ body#fullScreen #mainHeader {
 }
 
 #homeFullScreen .flexslider .slides > li {
-  height: 80px;
-  list-style: none;
+  height: 1em;
+ // list-style: none;
 }
 
 /*** flex ***/
@@ -882,9 +882,9 @@ body#fullScreen #mainHeader {
 }
 
 .flexslider .slides > li {
-  height: 2.875em;
-  //height: 110px;
-  list-style: none;
+  //height: 1.5em;
+  height: 110px;
+  //list-style: none;
 }
 
 .flex-control-nav {
@@ -952,11 +952,12 @@ body#fullScreen #mainHeader {
     font-size: 2em;
   }
   #homeFullScreen .flexslider .slides > li {
-    height: 60px;
+    height: 2em;
   }
   //#homeFullScreen .flexslider .slides > li {
   //  height: 60px;
   //}
+
   #flexHome h2 {
     font-size: 0.75em;
   }
@@ -999,7 +1000,7 @@ body#fullScreen #mainHeader {
   }
   .flexslider .slides > li {
     height: 160px;
-    list-style: none;
+    //list-style: none;
   }
   #homeFullScreen .flexslider .slides > li {
     height: 80px;

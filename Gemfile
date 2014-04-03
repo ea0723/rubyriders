@@ -10,8 +10,8 @@ gem "devise", "~> 3.2.2"                               # User authentication for
 gem 'activeadmin', github: 'gregbell/active_admin'     # The administration framework for Ruby on Rails
 #gem "active_admin_importable", "~> 1.1.2"             # Ability to upload CSV files in ActiveAdmin
 gem "ransack", github: "activerecord-hackery/ransack"  # gem "meta_search", '>= 1.1.3' Used for activeadmin. Allows simple search forms to be created
-gem "jquery-rails", "~> 3.0.4"                         # Used for activeadmin (and other things)
-gem "jquery-ui-rails"                                  # Used for activeadmin (and other things)
+gem "jquery-rails", "~> 3.1.0"                         # Used for activeadmin (and other things)
+gem "jquery-ui-rails", "~>4.2.0"                                  # Used for activeadmin (and other things)
 #gem 'newrelic_rpm'                                    # Gem to support new relic application monitoring
 #gem "omniauth", "~> 1.1.4"                            # Needed for Facebook login and signups
 #gem "omniauth-facebook", "~> 1.5.1"                   # Facebook specific omniauth support
@@ -24,7 +24,7 @@ gem 'sass-rails',   '>=3.2'                            # Needed for activeadmin
 gem 'bootstrap-sass', '~> 3.1.1'                       # Bootstrap for rails using sass
 gem 'formtastic-bootstrap', '~> 3.0.0.rc.2'            # Needed to use bootstrap in formtastic (ActiveAdmin) forms
 gem 'font-awesome-sass'                                # required to include font-awesome icons
-
+gem 'flexslider'                                       # woothemes flexslider for rails
 gem 'coffee-rails', '~> 4.0.1'
 gem "possessive"                                       # For making a noun possesive
 #gem 'draper', '~> 1.3'                                # Decorator manager

@@ -668,7 +668,7 @@ if($('#shareme').length){
 
     enableHover: false,
     enableCounter: false,
-    enableTracking: true,
+    enableTracking: true
       //url:'document.location.href'
   });
 }
@@ -1134,7 +1134,7 @@ var map = new google.maps.Map(document.getElementById(id), {
         "stylers": [
              {
                 "color": "#FCFFF5"
-            },
+            }
         ]
     },
     {
