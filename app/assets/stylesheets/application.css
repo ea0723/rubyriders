@@ -10,7 +10,9 @@
  *
  *= require_self
  *= require_tree .
- *=require bootstrap/bootstrap
- *=require bootstrap
-
+ *= require bootstrap/bootstrap
+ *= require bootstrap
+ *= require font-awesome
+ *= require ./animate
+ *= require ./magnific-popup
  */

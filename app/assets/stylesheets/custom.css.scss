@@ -736,6 +736,7 @@ hr {
 }
 
 .navbar-nav > li > a:hover i, .navbar-nav > li.active > a i {
+  background-color: #777;
   color: #fff;
 }
 
@@ -881,8 +882,8 @@ body#fullScreen #mainHeader {
 }
 
 .flexslider .slides > li {
-  //height: 2.875em;
-  height: 110px;
+  height: 2.875em;
+  //height: 110px;
   list-style: none;
 }
 
@@ -950,9 +951,9 @@ body#fullScreen #mainHeader {
     font-weight: 400;
     font-size: 2em;
   }
-  //#homeFullScreen .flexslider .slides > li {
-  //  height: 120px;
-  //}
+  #homeFullScreen .flexslider .slides > li {
+    height: 60px;
+  }
   //#homeFullScreen .flexslider .slides > li {
   //  height: 60px;
   //}

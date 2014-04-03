@@ -23,6 +23,8 @@ gem "uglifier", "~> 2.4.0"                             # Ruby wrapper for Uglify
 gem 'sass-rails',   '>=3.2'                            # Needed for activeadmin
 gem 'bootstrap-sass', '~> 3.1.1'                       # Bootstrap for rails using sass
 gem 'formtastic-bootstrap', '~> 3.0.0.rc.2'            # Needed to use bootstrap in formtastic (ActiveAdmin) forms
+gem 'font-awesome-sass'                                # required to include font-awesome icons
+
 gem 'coffee-rails', '~> 4.0.1'
 gem "possessive"                                       # For making a noun possesive
 #gem 'draper', '~> 1.3'                                # Decorator manager
