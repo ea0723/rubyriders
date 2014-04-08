@@ -324,37 +324,34 @@
 
 	<section class="slice" id="contact">
 	  <div class="container">
+		<h1 class="noSubtitle">Contact us</h1>
 		<div class="row">
-
-		  <div class="col-sm-12">
-			<h1 class="noSubtitle">Contact us</h1>
-		  </div>
-		  <form method="post" action="js-plugin/neko-contact-ajax-plugin/php/form-handler.php" id="contactfrm" role="form">
-
 			<div class="col-sm-6 col-sm-offset-3">
-			  <div class="form-group">
-				<label for="name"><h2>Name</h2></label>
-				<input type="text" class="form-control" name="name" id="name" placeholder="Enter name" title="Please enter your name (at least 2 characters)"/>
-			  </div>
-			  <div class="form-group">
-				<label for="email"><h2>Email</h2></label>
-				<input type="email" class="form-control" name="email" id="email" placeholder="Enter email" title="Please enter a valid email address"/>
-			  </div>
-			  <div class="form-group">
-				<label for="phone"><h2>Phone</h2></label>
-				<input name="phone" class="form-control required digits" type="tel" id="phone" size="30" value="" placeholder="Enter email phone" title="Please enter a valid phone number (at least 10 characters)">
-			  </div>
-			  <div class="form-group">
-				<label for="comments"><h2>Comments</h2></label>
-				<textarea name="comment" class="form-control" id="comments" cols="3" rows="5" placeholder="Enter your message…" title="Please enter your message (at least 10 characters)"></textarea>
-			  </div>
+			  <% flash.each do |name, msg| %>
+				  <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+					<a class="close" data-dismiss="alert">x</a>
+					<%= msg %>
+				  </div>
+			  <% end %>
+			  <%= simple_form_for :new_info_request_path, :html => { :class => 'form-horizontal' } do |f| %>
+				  <fieldset>
+					<legend><%= controller.action_name.capitalize %> Product</legend>
+
+					<%= f.input :name %>
+					<%= f.input :email %>
+					<%= f.input :phone %>
+					<%= f.input :subject %>
+					<%= f.input :comments%>
+
+					<div class="form-actions">
+					  <%= f.submit nil, :class => 'btn btn-primary' %>
+					  <%= link_to 'Cancel', href: 'localhost:3000', :class => 'btn' %>
+					</div>
+
+				  </fieldset>
+			  <% end %>
 			</div>
-			<div class="col-md-6 col-md-offset-3">
-			  <div class="result"></div>
-			  <button name="submit" type="submit" class="btn btn-lg" id="submit"> Submit</button>
-			</div>
-		  </form>
-		</div>
+	  	</div>
 	  </div>
 	</section>
 	<!-- contact -->
@@ -384,19 +381,17 @@
 			  <div class="footerWidget">
 				<ul class="socialNetwork pull-right">
 				  <li>
-					<a href="#" class="tips" title="" data-original-title="follow me on Facebook"><i class="icon-facebook-1 iconRounded"></i></a>
+					<a href="https://twitter.com/seedchange" class="tips" title="" data-original-title="follow us on Twitter" target="_blank"><i class="fa fa-twitter fa-2x iconRounded"></i></a>
 				  </li>
 				  <li>
-					<a href="https://twitter.com/LIttleNeko1" class="tips" title="" data-original-title="follow me on Twitter" target="_blank"><i class="icon-twitter-bird iconRounded"></i></a>
+					<a href="http://www.linkedin.com/company/3017442" class="tips" title="" data-original-title="find us on Linkedin"><i class="fa fa-linkedin fa-2x iconRounded"></i></a>
 				  </li>
 				  <li>
-					<a href="#" class="tips" title="" data-original-title="follow me on Google+"><i class="icon-gplus-1 iconRounded"></i></a>
+					<a href="https://medium.com/@seedchange" class="tips" title="" data-original-title="read us on Medium"><i class="fa fa-book fa-2x iconRounded"></i></a>
 				  </li>
 				  <li>
-					<a href="#" class="tips" title="" data-original-title="follow me on Linkedin"><i class="icon-linkedin-1 iconRounded"></i></a>
-				  </li>
-				  <li>
-					<a href="#" class="tips" title="" data-original-title="follow me on Dribble"><i class="icon-dribbble iconRounded"></i></a>
+					<a href="http://blog.seedchange.com" class="tips" title="" data-original-title="read our blog"><i
+					class="fa fa-rss fa-2x iconRounded"></i></a>
 				  </li>
 				</ul>
 			  </div>

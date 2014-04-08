@@ -1,5 +1,7 @@
 RubyAngel::Application.routes.draw do
 
+  resources :info_requests
+
   root 'home#index'
   get "home/index"
 

@@ -4,10 +4,7 @@ class Company < ActiveRecord::Base
 
   has_many :investments
 
-  #
-  #def company_name
-  #  Company.
-  #end
+  validates_presence_of :name
 
 
 end

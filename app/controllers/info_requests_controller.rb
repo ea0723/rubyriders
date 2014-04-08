@@ -1,0 +1,2 @@
+class InfoRequestsController < ApplicationController
+end

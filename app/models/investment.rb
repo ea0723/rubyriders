@@ -8,6 +8,9 @@ class Investment < ActiveRecord::Base
 
   mount_uploader :documents, DocumentsUploader
 
+  validates_presence_of :user
+  validates_presence_of :company
+
   #def document_filename
   #  "#{__FILE__.documents.documents}".to_str
   #  #params[:investment][:documents].original_filename

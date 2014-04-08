@@ -5,9 +5,13 @@ gem 'rails', '4.0.2'
 gem "unicorn", "~> 4.7.0"                              # Webserver recommended by heroku (for increased scaling)
 gem "unicorn-rails", "~> 1.1.0"                        # Makes unicorn the default rails server
 gem "pg", "~> 0.17.1"                                  # Postgres gem
-gem "heroku", "~> 3.2.2"                               # Heroku hosting (original gemfile used 3.2.2)
+#gem "heroku", "~> 3.2.2"                               # Heroku hosting (original gemfile used 3.2.2)
 gem "devise", "~> 3.2.2"                               # User authentication for users (original gemfile used 3.2.2)
 gem 'activeadmin', github: 'gregbell/active_admin'     # The administration framework for Ruby on Rails
+gem 'formtastic-bootstrap', '~> 3.0.0.rc.2'            # Needed to use bootstrap in formtastic (ActiveAdmin) forms
+gem 'simple_form'                                      # Rails forms made easy
+gem 'mail_form'                                        # Mail directly from simple_form
+gem 'chosen-rails'                                     # For making form fields more user friendly.
 #gem "active_admin_importable", "~> 1.1.2"             # Ability to upload CSV files in ActiveAdmin
 gem "ransack", github: "activerecord-hackery/ransack"  # gem "meta_search", '>= 1.1.3' Used for activeadmin. Allows simple search forms to be created
 gem "jquery-rails", "~> 3.1.0"                         # Used for activeadmin (and other things)
@@ -20,11 +24,12 @@ gem "fog"                                              # Standard gem for AWS ac
 #gem "premailer-rails", "~> 1.6.1"                     # In-lines stylesheets and rewrite relative URLs in emails
 gem "hstore-attributes", "~> 0.0.4"                    # Cuts down on code it takes to get hstore working in models
 gem "uglifier", "~> 2.4.0"                             # Ruby wrapper for UglifyJS JavaScript compressor.
+#gem 'modernizr-rails', '~> 2.7.1'                      #
 gem 'sass-rails',   '>=3.2'                            # Needed for activeadmin
 gem 'bootstrap-sass', '~> 3.1.1'                       # Bootstrap for rails using sass
-gem 'formtastic-bootstrap', '~> 3.0.0.rc.2'            # Needed to use bootstrap in formtastic (ActiveAdmin) forms
-gem 'font-awesome-sass'                                # required to include font-awesome icons
+gem 'font-awesome-sass'                                # required for font-awesome icons
 gem 'flexslider'                                       # woothemes flexslider for rails
+
 gem 'coffee-rails', '~> 4.0.1'
 gem "possessive"                                       # For making a noun possesive
 #gem 'draper', '~> 1.3'                                # Decorator manager
