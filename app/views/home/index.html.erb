@@ -333,7 +333,7 @@
 					<%= msg %>
 				  </div>
 			  <% end %>
-			  <%= simple_form_for :info_request_path, :html => { :class => 'form-horizontal' } do |f| %>
+			  <%= simple_form_for InfoRequest.new, :html => { :class => 'form-horizontal' } do |f| %>
 				  <fieldset>
 
 					<%= f.input :name, :required => true %>
@@ -343,7 +343,7 @@
 					<%= f.input :message, :as => :text, :required => true %>
 
 					<div class="hidden">
-					  <%= f.input :nickname, :hint => 'Leave this field blank!' %> <!--verifies real person -->
+					  <%#= f.input :nickname, :hint => 'Leave this field blank!' %> <!--verifies real person -->
 					</div>
 
 					<div class="form-actions">
