@@ -8,6 +8,7 @@ RubyAngel::Application.routes.draw do
   resources :investments
   resources :companies
   resources :home
+  resources :info_requests
   devise_for :users
   devise_for :admin_users, ActiveAdmin::Devise.config
 
