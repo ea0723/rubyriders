@@ -27,7 +27,27 @@ RubyAngel::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  # http://goo.gl/mFbq3
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.perform_deliveries = true
+  ActionMailer::Base.raise_delivery_errors = true
+  ActionMailer::Base.smtp_settings = {
+      :enable_starttls_auto => true,
+      :port               => 587,
+      :ssl                => true,
+      :port               => 465,
+      :address            => 'smtp.sendgrid.net',
+      :domain             => 'www.seedchange.com',
+      :authentication     => :plain,
+      :user_name          => 'SuperBizon',
+      :password           => 'olpermil923' # for security reasons you can use a environment variable too. (ENV['INFO_MAIL_PASS'])
+  }
+
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = { :host => 'localhost', :protocol => 'http', :port => 3000}
 
   #Paperclip.options[:command_path] = "/usr/local/bin/"
 end
