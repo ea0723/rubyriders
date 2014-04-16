@@ -333,7 +333,7 @@
 					<%= msg %>
 				  </div>
 			  <% end %>
-			  <%= simple_form_for InfoRequest.new, :html => { :class => 'form-horizontal' } do |f| %>
+			  <%= simple_form_for @info_request, :html => { :class => 'form-horizontal' } do |f| %>
 				  <fieldset>
 
 					<%= f.input :name, :required => true %>
