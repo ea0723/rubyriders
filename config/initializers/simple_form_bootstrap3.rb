@@ -1,5 +1,10 @@
 SimpleForm.setup do |config|
-  config.wrappers :bootstrap, tag: 'div', class: 'form-group', error_class: 'error' do |b|
+  # For Twitter Bootstrap 3 rather than redefining Inputs and conflicting with Formtastic.
+  config.input_class = 'form-control'
+
+  config.boolean_style = :nested
+
+  config.wrappers :bootstrap3, tag: 'div', class: 'form-group', error_class: 'error' do |b|
     b.use :html5
     b.use :placeholder
     b.use :label
@@ -10,7 +15,7 @@ SimpleForm.setup do |config|
     end
   end
 
-  config.wrappers :prepend, tag: 'div', class: "form-group", error_class: 'error' do |b|
+  config.wrappers :prepend, tag: 'div', class: 'form-group', error_class: 'error' do |b|
     b.use :html5
     b.use :placeholder
     b.use :label
@@ -23,7 +28,7 @@ SimpleForm.setup do |config|
     end
   end
 
-  config.wrappers :append, tag: 'div', class: "form-group", error_class: 'error' do |b|
+  config.wrappers :append, tag: 'div', class: 'form-group', error_class: 'error' do |b|
     b.use :html5
     b.use :placeholder
     b.use :label
@@ -40,5 +45,5 @@ SimpleForm.setup do |config|
   # Check the Bootstrap docs (http://twitter.github.com/bootstrap)
   # to learn about the different styles for forms and inputs,
   # buttons and other elements.
-  config.default_wrapper = :bootstrap
+  config.default_wrapper = :bootstrap3
 end
