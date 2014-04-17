@@ -6,8 +6,8 @@ CarrierWave.configure do |config|
 
     config.fog_credentials = {
         :provider               => 'AWS',
-        :aws_access_key_id      => ENV['AKIAIC6AIDUVISFC6K5Q'],
-        :aws_secret_access_key  => ENV['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']
+        :aws_access_key_id      => ENV['AWS_ACCESS_KEY_ID'],
+        :aws_secret_access_key  => ENV['AWS_SECRET_ACCESS_KEY']
     }
 
     config.fog_directory  = ENV['rubyangel']
@@ -20,4 +20,4 @@ CarrierWave.configure do |config|
 
 end
 
-# TODO get seedchange AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, S3_BUCKET_NAME
+# TODO set up on heroku AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, S3_BUCKET_NAME
