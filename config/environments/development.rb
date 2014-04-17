@@ -49,5 +49,8 @@ RubyAngel::Application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default_url_options = { :host => 'localhost', :protocol => 'http', :port => 3000}
 
+  # Send notices to this person as set in mailers/mailer.rb
+  config.reply_to_nate = 'elena@rubyriders.com'
+
   #Paperclip.options[:command_path] = "/usr/local/bin/"
 end

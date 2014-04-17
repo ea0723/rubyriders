@@ -333,22 +333,23 @@
 					<%= msg %>
 				  </div>
 			  <% end %>
-			  <%= simple_form_for @info_request, :html => { :class => 'form-horizontal' } do |f| %>
+			  <%= simple_form_for @info_request, :html => { :class => 'simple_form form-horizontal' } do |f| %>
 				  <fieldset>
 
-					<%= f.input :name, :required => true %>
-					<%= f.input :email, :required => true %>
-					<%= f.input :phone, :required => false %>
-					<%= f.input :subject, :required => true %>
-					<%= f.input :message, :as => :text, :required => true %>
+					<%= f.input :name, :required => true, :placeholder => 'Name' %>
+					<%= f.input :email, :required => true, :placeholder => 'Email' %>
+					<%= f.input :phone, :placeholder => 'Phone'  %>
+					<%= f.input :subject, :placeholder => 'Subject'  %>
+					<%= f.input :message, :as => :text, :required => true, :placeholder => 'Message' %>
 
 					<div class="hidden">
-					  <%#= f.input :nickname, :hint => 'Leave this field blank!' %> <!--verifies real person -->
+					  <%= hidden_field_tag :nickname, :hint => 'Leave this field blank!' %> <!--verifies real person
+					   -->
 					</div>
 
 					<div class="form-actions">
 					  <%= f.submit 'Send Message', :class => 'btn btn-primary' %>
-					  <%= link_to 'Clear', href: '#contact', :class => 'btn' %>
+					  <%= link_to 'Clear', :href => '#contact', :class => 'btn' %>
 					</div>
 
 				  </fieldset>

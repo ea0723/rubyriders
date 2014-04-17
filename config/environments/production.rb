@@ -77,4 +77,7 @@ RubyAngel::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # Send notices to this person as set in mailers/mailer.rb
+  config.reply_to_nate = 'elenanewton@icloud.com'
 end

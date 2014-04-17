@@ -3,6 +3,10 @@ class Mailer < ActionMailer::Base
 
 	def signup_mail(request)
 		@message = request.message
-		mail(to: request.email, subject: request.subject)
+    @sender = request.name
+    @reply_to = request.email
+    @sent = request.created_at
+    @id = request.id
+		mail(to: Rails.application.config.reply_to_nate, subject: request.subject)
 	end
 end
