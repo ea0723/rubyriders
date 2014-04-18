@@ -4,7 +4,6 @@ inputs = %w[
   FileInput
   GroupedCollectionSelectInput
   NumericInput
-  PasswordInput
   RangeInput
   StringInput
   TextInput

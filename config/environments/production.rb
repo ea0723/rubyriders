@@ -65,6 +65,26 @@ RubyAngel::Application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
+  config.action_mailer.default_url_options = { :host => 'www.seedchange.com' }
+
+  ActionMailer::Base.delivery_method       = :smtp
+  ActionMailer::Base.perform_deliveries    = true
+  ActionMailer::Base.raise_delivery_errors = true
+  ActionMailer::Base.smtp_settings         = {
+          :enable_starttls_auto => true,
+          :port           => 587,
+          :ssl            => true,
+          :port           => 465,
+          :address        => 'smtp.sendgrid.net',
+          :domain         => 'www.seedchange.com',
+          :authentication => :plain,
+          :user_name      => 'SuperBizon',
+          :password       => 'olpermil923' # for security reasons you can use a environment variable too. (ENV['INFO_MAIL_PASS'])
+  }
+
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.perform_deliveries  = true
+
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found).
   config.i18n.fallbacks = true
