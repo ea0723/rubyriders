@@ -53,4 +53,8 @@ RubyAngel::Application.configure do
   config.reply_to_nate = 'elena@rubyriders.com'
 
   #Paperclip.options[:command_path] = "/usr/local/bin/"
+
+  config.assets.raise_production_errors = true
+
+
 end

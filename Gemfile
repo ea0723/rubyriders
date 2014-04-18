@@ -39,6 +39,7 @@ gem "possessive"                                       # For making a noun posse
 #gem "memcachier", "~> 0.0.2"                          # See https://devcenter.heroku.com/articles/memcachier#rails-3-and-4
 #gem "dalli", "~> 2.7.0"                               # Required for memcachier
 gem 'carrierwave'                                      # For file attachments
+gem 'sprockets_better_errors'                          # For clarity on heroku when issues arise in serving up assets
 
 group :staging, :production do
   gem "rails_12factor", "~> 0.0.2"                     # Helps speed up deploys on heroku
