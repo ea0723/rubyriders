@@ -1,13 +1,18 @@
 <div>
 
-  <p>You have a new message on RubyAngel.</p>
+  <p>Hi Nate! </p>
+
+  <p><%= "#{@sender}" %> has requested additional information about AngelPM.</p>
+
   <hr>
 
   	<p>From: <%= "#{@sender}" %></p>
   	<p>Reply to: <%= "#{@reply_to}" %></p>
 	<p>Sent at: <%= "#{@sent}" %></p>
 	<p>---------------------------------------</p>
-	<p>Message is as follows:</p>
+
+  <p>Subject: <%= "#{@subject}" %></p>
+  <p>Message:</p>
   		<p><%= @message %></p>
 
 </div>

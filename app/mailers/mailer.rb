@@ -7,6 +7,7 @@ class Mailer < ActionMailer::Base
     @reply_to = request.email
     @sent = request.created_at
     @id = request.id
-		mail(to: Rails.application.config.reply_to_nate, subject: request.subject)
+    @subject = request.subject
+		mail(to: Rails.application.config.reply_to_nate, subject: 'New request for info about AngelPM')
 	end
 end
