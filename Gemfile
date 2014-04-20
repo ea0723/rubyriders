@@ -13,7 +13,7 @@ gem 'simple_form'                                      # Rails forms made easy
 gem 'mail_form'                                        # Mail directly from simple_form
 gem 'nested_form'                                      # For handling multiple models in a single form
 #gem 'chosen-rails', group: :assets                    # For making form fields more user friendly.
-gem 'chosen-rails'                                     # For making form fields more user friendly.
+#gem 'chosen-rails'                                     # For making form fields more user friendly.
 #gem "active_admin_importable", "~> 1.1.2"             # Ability to upload CSV files in ActiveAdmin
 gem "ransack", github: "activerecord-hackery/ransack"  # gem "meta_search", '>= 1.1.3' Used for activeadmin. Allows simple search forms to be created
 gem "jquery-rails", "~> 3.1.0"                         # Used for activeadmin (and other things)
@@ -28,7 +28,7 @@ gem "hstore-attributes", "~> 0.0.4"                    # Cuts down on code it ta
 gem "uglifier", "~> 2.4.0"                             # Ruby wrapper for UglifyJS JavaScript compressor.
 #gem 'modernizr-rails', '~> 2.7.1'                      #
 gem 'sass-rails',   '>=3.2'                            # Needed for activeadmin
-gem 'bootstrap-sass', '~> 3.1.1'                       # Bootstrap for rails using sass
+gem 'bootstrap-sass', '>=3.1.1'                        # Bootstrap for rails using sass
 gem 'font-awesome-sass'                                # required for font-awesome icons
 gem 'flexslider'                                       # woothemes flexslider for rails
 

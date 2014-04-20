@@ -13,5 +13,6 @@
  *= require bootstrap
  *= require font-awesome
  *= require flexslider.css
- *= require chosen
+ *= require active_admin
+ *= require sea-green.css
  */

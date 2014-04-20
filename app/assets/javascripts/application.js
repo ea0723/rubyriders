@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.flexslider
-//= require chosen-jquery
 //= require custom.js
 //= require bootstrap
 //= require_tree .
