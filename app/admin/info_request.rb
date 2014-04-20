@@ -1,7 +1,7 @@
 ActiveAdmin.register InfoRequest do
 
   config.clear_action_items!
-  actions :all, :except => [:new]
+  actions :all, :except => [:new, :edit]
 
   index do
     selectable_column
@@ -19,9 +19,12 @@ ActiveAdmin.register InfoRequest do
     attributes_table do
       row :created_at
       row :name
-      row :email
+      row :email, :as => :mailto
       row :subject
-      row :message, :as => :long_text
+      row :message
+      action do
+
+      end
     end
   end
 
