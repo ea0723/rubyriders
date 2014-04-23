@@ -10,9 +10,9 @@ inputs = %w[
 ]
 
 inputs.each do |input_type|
-  superclass = "SimpleForm::Inputs::#{input_type}".constantize
+  simpleclass = "SimpleForm::Inputs::#{input_type}".constantize
 
-  new_class = Class.new(superclass) do
+  new_class = Class.new(simpleclass) do
     def input_html_classes
       super.push('form-control')
     end
