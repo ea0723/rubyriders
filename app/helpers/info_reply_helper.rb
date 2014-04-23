@@ -1,0 +1,2 @@
+module InfoReplyHelper
+end

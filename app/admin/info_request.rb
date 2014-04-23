@@ -19,12 +19,10 @@ ActiveAdmin.register InfoRequest do
     attributes_table do
       row :created_at
       row :name
-      row :email, :as => :mailto
+      row :email
       row :subject
       row :message
-      action do
-
-      end
+      #action do { button "Reply", :mailto => :email()  }
     end
   end
 

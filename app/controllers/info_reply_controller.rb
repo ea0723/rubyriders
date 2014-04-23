@@ -1,0 +1,2 @@
+class InfoReplyController < ApplicationController
+end

@@ -8,6 +8,6 @@ class Mailer < ActionMailer::Base
     @sent = request.created_at
     @id = request.id
     @subject = request.subject
-		mail(to: Rails.application.config.reply_to_nate, subject: 'New request for info about AngelPM')
+		mail(to: Rails.application.config.reply_to_nate, subject: 'New Info Request for AngelPM')
 	end
 end

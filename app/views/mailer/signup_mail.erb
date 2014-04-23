@@ -1,20 +1,23 @@
 <div>
 
-  <p>Hi Nate! </p>
+  <p>Hi Nate, </p>
 
   <p><%= "#{@sender}" %> has requested additional information about AngelPM.</p>
+  <p><%= link_to "View the message in AngelPM here", admin_info_request_path(InfoRequest.find_by_id(@id))
+  %></p>
 
   <hr>
-
-  	<p>From: <%= "#{@sender}" %></p>
-  	<p>Reply to: <%= "#{@reply_to}" %></p>
-	<p>Sent at: <%= "#{@sent}" %></p>
-	<p>---------------------------------------</p>
-
-  <p>Subject: <%= "#{@subject}" %></p>
-  <p>Message:</p>
+  	<p><strong>Sent at:</strong> <%= "#{@sent}" %></p>
+  	<p><strong>From:</strong> <%= "#{@sender} < #{@reply_to} >" %></p>
+  	<p><strong>Subject:</strong> <%= "#{@subject}" %></p>
+	<p>----------------------------------------------------------</p>
+  	<p><strong>Message:</strong></p>
   		<p><%= @message %></p>
+
+
+
+
 
 </div>
 
-<!-- add link to view message on activeadmin -->
+<!-- TODO fix link to view message in active-admin -->

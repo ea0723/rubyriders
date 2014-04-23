@@ -1,7 +1,5 @@
 RubyAngel::Application.routes.draw do
 
-  resources :info_requests
-
   root 'home#index'
   get "home/index"
 
@@ -9,6 +7,7 @@ RubyAngel::Application.routes.draw do
   resources :companies
   resources :home
   resources :info_requests
+  resources :info_replies
   devise_for :users
   devise_for :admin_users, ActiveAdmin::Devise.config
 
