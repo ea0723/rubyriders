@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/activerecord-hackery/ransack.git
-  revision: 20daefbbff99621a9db08307c60fc431deab2a68
+  revision: 1fd76da42be86ef1a93095d4336917d2f27d0667
   specs:
     ransack (1.2.2)
       actionpack (>= 3.0)
@@ -65,7 +65,7 @@ GEM
     bcrypt (3.1.7)
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
-    bourbon (3.2.0)
+    bourbon (3.2.1)
       sass (~> 3.2)
       thor
     builder (3.1.4)
@@ -83,7 +83,7 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
-    childprocess (0.5.2)
+    childprocess (0.5.3)
       ffi (~> 1.0, >= 1.0.11)
     codeclimate-test-reporter (0.3.0)
       simplecov (>= 0.7.1, < 1.0.0)

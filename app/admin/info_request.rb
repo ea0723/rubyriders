@@ -1,28 +1,27 @@
 ActiveAdmin.register InfoRequest do
 
-  config.clear_action_items!
-  actions :all, :except => [:new, :edit]
+  config.clear_action_items!                # removes Create New button from top-right of page
+  actions :all, :except => [:new, :edit]    # prevents "new" and "edit" actions
 
-  index do
+  index do                                  # controls index page
     selectable_column
     column "Created", :created_at
     column :name
     column :email
     column :subject
-    actions
+    actions                                 # displays actions as specified in line 4
   end
 
+  filter :name                              # always create a filter to prevent default filters
   filter :email
-  filter :created_at
 
-  show :title => :subject do
-    attributes_table do
+  show :title => :subject do                # controls view of individual record page
+    attributes_table do                     # controls individual record display
       row :created_at
       row :name
       row :email
       row :subject
       row :message
-      #action do { button "Reply", :mailto => :email()  }
     end
   end
 
