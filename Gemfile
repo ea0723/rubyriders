@@ -25,7 +25,7 @@ gem "uglifier", "~> 2.4.0"                             # Ruby wrapper for Uglify
 #gem 'modernizr-rails', '~> 2.7.1'                     # 
 gem 'sass-rails',   '>=3.2'                            # Needed for activeadmin and bootstrap sass
 gem 'bootstrap-sass', '>=3.1.1'                        # Bootstrap for rails using sass
-gem 'font-awesome-sass'                                # required for font-awesome icons
+#gem 'font-awesome-sass'                                # required for font-awesome icons
 gem 'flexslider'                                       # woothemes flexslider for rails
 gem 'coffee-rails', '~> 4.0.1'
 gem "possessive"                                       # For making a noun possesive
