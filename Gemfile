@@ -23,9 +23,9 @@ gem "fog"                                              # Standard gem for AWS ac
 gem "hstore-attributes", "~> 0.0.4"                    # Cuts down on code it takes to get hstore working in models
 gem "uglifier", "~> 2.4.0"                             # Ruby wrapper for UglifyJS JavaScript compressor.
 #gem 'modernizr-rails', '~> 2.7.1'                     # 
-gem 'sass-rails',   '>=3.2'                            # Needed for activeadmin and bootstrap sass
+gem 'sass-rails', '4.0.2'                            # Needed for activeadmin and bootstrap sass
 gem 'bootstrap-sass', '>=3.1.1'                        # Bootstrap for rails using sass
-gem 'font-awesome-sass'                                # required for font-awesome icons
+gem 'font-awesome-rails'                               # required for font-awesome icons
 gem 'flexslider'                                       # woothemes flexslider for rails
 gem 'coffee-rails', '~> 4.0.1'
 gem "possessive"                                       # For making a noun possesive
@@ -33,6 +33,7 @@ gem "possessive"                                       # For making a noun posse
 #gem "dalli", "~> 2.7.0"                               # Required for memcachier
 gem 'carrierwave'                                      # For file attachments
 gem 'sprockets_better_errors'                          # For clarity on heroku when issues arise in serving up assets
+gem 'sprockets', '2.11.0'                              # to lock sprockets as the latest breaks many many things
 
 group :staging, :production do
   gem "rails_12factor", "~> 0.0.2"                     # Helps speed up deploys on heroku
