@@ -23,7 +23,7 @@ gem "fog"                                              # Standard gem for AWS ac
 gem "hstore-attributes", "~> 0.0.4"                    # Cuts down on code it takes to get hstore working in models
 gem "uglifier", "~> 2.4.0"                             # Ruby wrapper for UglifyJS JavaScript compressor.
 #gem 'modernizr-rails', '~> 2.7.1'                     # 
-gem 'sass-rails', '4.0.2'                            # Needed for activeadmin and bootstrap sass
+gem 'sass-rails', '4.0.2'                              # Needed for activeadmin and bootstrap sass
 gem 'bootstrap-sass', '>=3.1.1'                        # Bootstrap for rails using sass
 gem 'font-awesome-rails'                               # required for font-awesome icons
 gem 'flexslider'                                       # woothemes flexslider for rails
