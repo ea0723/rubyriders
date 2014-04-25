@@ -1,15 +1,4 @@
 GIT
-  remote: git://github.com/activerecord-hackery/ransack.git
-  revision: 1f93380f6241fb7b44593930a5b6be18b9bc9fb0
-  specs:
-    ransack (1.2.2)
-      actionpack (>= 3.0)
-      activerecord (>= 3.0)
-      activesupport (>= 3.0)
-      i18n
-      polyamorous (~> 1.0.0)
-
-GIT
   remote: git://github.com/gregbell/active_admin.git
   revision: 65aae6b68e78aad3071b2f85242b19fd3fccf426
   specs:
@@ -229,6 +218,12 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.13.0)
     rake (10.3.1)
+    ransack (1.2.2)
+      actionpack (>= 3.0)
+      activerecord (>= 3.0)
+      activesupport (>= 3.0)
+      i18n
+      polyamorous (~> 1.0.0)
     responders (1.0.0)
       railties (>= 3.2, < 5)
     rspec-core (2.14.8)
@@ -332,7 +327,6 @@ DEPENDENCIES
   rails (= 4.0.2)
   rails-observers
   rails_12factor (~> 0.0.2)
-  ransack!
   rspec-rails (~> 2.14.0)
   sass-rails (>= 3.2)
   selenium-webdriver (~> 2.39.0)

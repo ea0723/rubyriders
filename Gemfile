@@ -12,7 +12,7 @@ gem 'simple_form'                                      # Rails forms made easy
 gem 'mail_form'                                        # Mail directly from simple_form
 gem 'nested_form'                                      # For handling multiple models in a single form
 #gem "active_admin_importable", "~> 1.1.2"             # Ability to upload CSV files in ActiveAdmin
-gem "ransack", github: "activerecord-hackery/ransack"  # gem "meta_search", '>= 1.1.3' Used for activeadmin. Allows
+#gem "ransack", github: "activerecord-hackery/ransack"  # gem "meta_search", '>= 1.1.3' Used for activeadmin. Allows
                                                           # --> simple search forms to be created
 gem "jquery-rails", "~> 3.1.0"                         # Used for activeadmin (and other things)
 gem "jquery-ui-rails", "~>4.2.0"                       # Used for activeadmin (and other things)
