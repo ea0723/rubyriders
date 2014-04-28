@@ -2,8 +2,9 @@ source 'https://rubygems.org'
 ruby '2.1.0'
 
 gem 'rails', '4.0.2'
-gem "unicorn", "~> 4.7.0"                              # Webserver recommended by heroku (for increased scaling)
-gem "unicorn-rails", "~> 1.1.0"                        # Makes unicorn the default rails server
+gem 'thin', '~> 1.6.2'                                 # Debugging heroku crashes
+#gem "unicorn", "~> 4.7.0"                              # Webserver recommended by heroku (for increased scaling)
+#gem "unicorn-rails", "~> 1.1.0"                        # Makes unicorn the default rails server
 gem "pg", "~> 0.17.1"                                  # Postgres gem
 gem "devise", "~> 3.2.2"                               # User authentication for users (original gemfile used 3.2.2)
 gem 'activeadmin', github: 'gregbell/active_admin'     # The administration framework for Ruby on Rails
