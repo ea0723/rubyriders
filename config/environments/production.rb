@@ -102,5 +102,5 @@ RubyAngel::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Send notices to this person as set in mailers/mailer.rb
-  config.reply_to_nate = 'elenanewton@icloud.com'
+  config.reply_to_nate = 'nate@seed-change.com'
 end
