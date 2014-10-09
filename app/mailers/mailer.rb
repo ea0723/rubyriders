@@ -1,5 +1,5 @@
 class Mailer < ActionMailer::Base
-	default from: '"rubyangel" <noreply@rubyangel.com>'
+	default from: '"rubyriders" <noreply@rubyriders.com>'
 
 	def signup_mail(request)
 		@message = request.message
@@ -8,6 +8,6 @@ class Mailer < ActionMailer::Base
     @sent = request.created_at
     @id = request.id
     @subject = request.subject
-		mail(to: Rails.application.config.reply_to_nate, subject: 'New Info Request for AngelPM')
+		mail(to: Rails.application.config.reply_to_rubyriders, subject: 'New Info Request for Rubyriders')
 	end
 end

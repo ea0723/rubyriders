@@ -68,7 +68,7 @@ RubyAngel::Application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
-  config.action_mailer.default_url_options = { :host => 'www.seedchange.com' }
+  config.action_mailer.default_url_options = { :host => 'www.rubyriders.com' }
 
   ActionMailer::Base.delivery_method       = :smtp
   ActionMailer::Base.perform_deliveries    = true
@@ -79,12 +79,12 @@ RubyAngel::Application.configure do
           :ssl            => true,
           :port           => 465,
           :address        => 'smtp.sendgrid.net',
-          :domain         => 'www.seedchange.com',
+          :domain         => 'www.rubyriders.com',
           :authentication => :plain,
           :user_name      => 'SuperBizon',
           :password       => 'olpermil923' # for security reasons you can use a environment variable too. (ENV['INFO_MAIL_PASS'])
   }
-
+# TODO update ActionMailer config
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.perform_deliveries  = true
 
@@ -102,5 +102,5 @@ RubyAngel::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Send notices to this person as set in mailers/mailer.rb
-  config.reply_to_nate = 'nate@seed-change.com'
+  config.reply_to_rubyriders = 'roger@rubyriders.com'
 end

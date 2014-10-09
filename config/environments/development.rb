@@ -39,7 +39,7 @@ RubyAngel::Application.configure do
       :ssl                => true,
       :port               => 465,
       :address            => 'smtp.sendgrid.net',
-      :domain             => 'www.seedchange.com',
+      :domain             => 'www.rubyriders.com',
       :authentication     => :plain,
       :user_name          => 'SuperBizon',
       :password           => 'olpermil923' # for security reasons you can use a environment variable too. (ENV['INFO_MAIL_PASS'])
@@ -50,7 +50,7 @@ RubyAngel::Application.configure do
   config.action_mailer.default_url_options = { :host => 'localhost', :protocol => 'http', :port => 3000}
 
   # Send notices to this person as set in mailers/mailer.rb
-  config.reply_to_nate = 'elena@rubyriders.com'
+  config.reply_to_rubyriders = 'elena@rubyriders.com'
 
   #Paperclip.options[:command_path] = "/usr/local/bin/"
 

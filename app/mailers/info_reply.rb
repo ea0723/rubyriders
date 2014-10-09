@@ -4,7 +4,7 @@ class InfoReply < ActionMailer::Base
   def info_reply(request)
     @message = request.message
     @sender  = request.name
-    @reply_to = Rails.application.config.reply_to_nate
+    @reply_to = Rails.application.config.reply_to_rubyriders
     @id      = request.id
     mail(to: request.email, subject: 'Re: your request for info about AngelPM')
   end
