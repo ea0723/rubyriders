@@ -32,6 +32,7 @@
 		================================================== -->
 <!-- globalWrapper -->
 <div id="globalWrapper" class="localscroll">
+<!-- 
   <div class="nav navbar-default navbar-fixed-top navbar-header scrollMenu" id="mainHeader" role="banner">
 	<div class="nav navbar-header" id="navigation">
 	<h1 class="navbar-brand" href="#">Rubyriders, LLC</h1>
@@ -41,8 +42,10 @@
 		<i class="icon-bar"></i>
 		<i class="icon-bar"></i>
 	  </button>
-	  </div> <!-- required to pull menu items right, but leave brand pulled left-->
-	  <div class="nav collapse navbar-collapse pull-right" id="scrollTarget">
+	  </div>
+     -->
+     <!-- required to pull menu items right, but leave brand pulled left-->
+<!--   <div class="nav collapse navbar-collapse pull-right" id="scrollTarget">
 		<ul class="nav navbar-nav pull-right">
 		  <li class="active"><%= link_to "Home", "#homeFullScreen" %></li>
 		  <li><%= link_to "Features", '#features' %></li>
@@ -55,7 +58,26 @@
 		</ul>
 	  </div>
 	</div>
+ -->
 
+  <nav class="menunav">
+    
+    <!-- Close menu nav -->
+    <div class="icon-close"></div>
+
+    <!-- Menu -->
+    <ul>
+      <li class="active"><%= link_to "Home", "#homeFullScreen" %></li>
+      <li><%= link_to "Features", '#features' %></li>
+      <li><%= link_to "About", '#about' %></li>
+      <li><%= link_to "Plans", '#plans' %></li>
+      <li><%= link_to "Team", '#team' %></li>
+      <li><%= link_to "Contact", '#contact' %></li>
+      <li><%= link_to "Login", '#' %></li>
+      <li><%= link_to "Sign Up", '#' %></li>
+    </ul>
+
+  </nav>
 
   <!-- end navbar -->
 
