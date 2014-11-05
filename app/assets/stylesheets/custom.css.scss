@@ -1439,6 +1439,7 @@ p.credits {
   height: 100%;
   position: fixed;
   width: 185px;
+  z-index: 1;
   // margin-top: -2px;
   ul {
     border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -1458,6 +1459,11 @@ p.credits {
     font-size: 0.938em;
     text-decoration: none;
     text-transform: uppercase;
+    &:hover, &.active {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
   }
 }
 
