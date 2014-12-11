@@ -1435,7 +1435,7 @@ p.credits {
 
 .menunav {
   background: rgba(61, 78, 106, 0.7);
-  // left: -285px;  
+  // left: -285px;
   height: 100%;
   position: fixed;
   width: 185px;
@@ -1470,6 +1470,9 @@ p.credits {
 .icon-close {
   cursor: pointer;
   height: 40px;
+  width: 40px;
+  display: block;
+  // border: 1px solid red;
 }
 
 .icon-menu {
