@@ -9,11 +9,24 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_tree .
+ *= require style
  *= require bootstrap
  *= require sea-green.css
  *= require font-awesome
  *= require flexslider.css
  *= require active_admin
-
+ *= require owl.carousel
+ *= require prettyPhoto
+ *= require reset
+ *= require responsive
+ *= require settings
  */
+@import "style";
 @import "bootstrap";
+@import "font-awesome";
+@import "owl.carousel";
+@import "prettyPhoto";
+@import "reset";
+@import "responsive";
+@import "settings";
+

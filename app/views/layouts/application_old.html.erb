@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Basic Page Needs
+	================================================== -->
+	<meta charset="utf-8">
+	<title>Rubyriders, LLC</title>
+	<!-- Device Specific Metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "modernizr-latest" %>
+	<%= csrf_meta_tags %>
+	<!-- CSS
+	 ================================================== -->
+	<!-- web font  -->
+	<%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800" %>
+
+</head>
+
+<body data-spy="scroll" data-target="#scrollTarget" data-offset="150" id="fullScreen">
+<!-- Preloader -->
+<!--<div id="preloader">
+	<div id="status">
+	<img src="images/theme-pics/loader.gif" alt=""/>
+	<h1 class="noSubtitle">Just a moment please...</h1>
+	</div>
+</div>-->
+<!-- Preloader -->
+<!-- Primary Page Layout
+		================================================== -->
+<!-- globalWrapper -->
+<div id="globalWrapper" class="localscroll">
+	<!--
+		<div class="nav navbar-default navbar-fixed-top navbar-header scrollMenu" id="mainHeader" role="banner">
+		<div class="nav navbar-header" id="navigation">
+		<h1 class="navbar-brand" href="#">Rubyriders, LLC</h1>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			<i class="sr-only">Toggle navigation</i>
+			<i class="icon-bar"></i>
+			<i class="icon-bar"></i>
+			<i class="icon-bar"></i>
+			</button>
+			</div>
+			 -->
+	<!-- required to pull menu items right, but leave brand pulled left-->
+	<!--   <div class="nav collapse navbar-collapse pull-right" id="scrollTarget">
+		<ul class="nav navbar-nav pull-right">
+		  <li class="active"><%= link_to "Home", "#homeFullScreen" %></li>
+		  <li><%= link_to "Features", '#features' %></li>
+		  <li><%= link_to "About", '#about' %></li>
+		  <li><%= link_to "Plans", '#plans' %></li>
+		  <li><%= link_to "Team", '#team' %></li>
+		  <li><%= link_to "Contact", '#contact' %></li>
+		  <li><%= link_to "Login", '#' %></li>
+		  <li><%= link_to "Sign Up", '#' %></li>
+		</ul>
+	  </div>
+	</div>
+ -->
+
+	<nav class="menunav">
+
+		<!-- Close menu nav -->
+		<a class="icon-close"></a>
+
+		<!-- Menu -->
+		<ul>
+			<li class="active"><%= link_to "Home", "#homeFullScreen" %></li>
+			<li><%= link_to "Features", '#features' %></li>
+			<li><%= link_to "About", '#about' %></li>
+			<li><%= link_to "Plans", '#plans' %></li>
+			<li><%= link_to "Team", '#team' %></li>
+			<li><%= link_to "Contact", '#contact' %></li>
+			<li><%= link_to "Login", '#' %></li>
+			<li><%= link_to "Sign Up", '#' %></li>
+		</ul>
+
+	</nav>
+
+	<!-- end navbar -->
+
+	<!-- page content -->
+
+
+	<%= yield %>
+
+
+	<!-- end page content -->
+</div>
+<!-- End Document
+================================================== -->
+
+
+</body>
+</html>
