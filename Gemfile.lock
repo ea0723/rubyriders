@@ -52,8 +52,6 @@ GEM
     arel (4.0.2)
     awesome_print (1.2.0)
     bcrypt (3.1.7)
-    bootstrap-sass (3.1.1.1)
-      sass (~> 3.2)
     bourbon (3.2.1)
       sass (~> 3.2)
       thor
@@ -114,8 +112,6 @@ GEM
     faker (1.2.0)
       i18n (~> 0.5)
     ffi (1.9.3)
-    flexslider (2.2.0)
-      sass-rails (>= 3.1.0)
     fog (1.22.0)
       fog-brightbox
       fog-core (~> 1.21, >= 1.21.1)
@@ -301,7 +297,6 @@ PLATFORMS
 DEPENDENCIES
   activeadmin!
   awesome_print
-  bootstrap-sass (>= 3.1.1)
   capybara (~> 2.2.1)
   capybara-firebug (~> 2.0.0)
   carrierwave
@@ -311,7 +306,6 @@ DEPENDENCIES
   devise (~> 3.2.2)
   factory_girl_rails (~> 4.3.0)
   faker (~> 1.2.0)
-  flexslider
   fog
   font-awesome-rails
   formtastic-bootstrap (~> 3.0.0.rc.2)

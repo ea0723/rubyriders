@@ -333,7 +333,7 @@ window.onload = function () {
 			
 			var myLatlng = new google.maps.LatLng(18.411378,-66.102344);
 			
-			var image = 'images/marker.png';
+			var image = 'assets/marker.png';
 			var marker = new google.maps.Marker({
 				  position: myLatlng,
 				  map: map,
